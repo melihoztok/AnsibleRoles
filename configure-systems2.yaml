@@ -1,12 +1,12 @@
 # Playbook to call multiple roles to configure systems
 - name: Configure systems
-  hosts: 192.168.1.186
+  hosts: 192.168.1.186 ansible_ssh_user=root   ansible_ssh_pass=dq27Zh
   become: yes
 
   tasks:
 
 - name: Call Roles
-  hosts: 192.168.1.186
+  hosts: 192.168.1.186 ansible_ssh_user=root   ansible_ssh_pass=dq27Zh
   roles:
    #- hostname
    - firewalld
